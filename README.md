@@ -9,9 +9,7 @@ The software design is depicted in the figure below.
 Usage:
 
 Step1: The user takes a picture of themselves via their webcam feed (integrated into the web-based UI).
-
 Step2: Choose their target hairstyle from among the presented options, and select certain configurable parameters related to Blending.
-
 Step3: Launch the transform processing sequence.
 
 In a short while, the output image showing the user's AI-generated makeover is displayed!

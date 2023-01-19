@@ -1,4 +1,4 @@
-# The Directors Cut
+# The Director's Cut
 A real-time Hairstyle Transformation Toolkit, enabling a novel usecase for Generative AI.
 Utilises a DNN developed by the Barbershop Research Project - https://zpdesu.github.io/Barbershop/
 

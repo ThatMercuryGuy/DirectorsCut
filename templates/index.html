@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            Image Generation
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Ubuntu:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    </head>
+    <body background="{{ url_for('static', filename='background.jpg') }}">
+        <nav>
+            <div id="navbar">
+                <span id="home" class="nav"><button class="dropbtn" id="homeBtn"><a href="/">Home</a></button></span>
+                <span id="AIremaster" class="nav"><button class="dropbtn" id="AIremasterBtn"><a href="/demo">AI remaster</a></button></span>
+                <span id="interpolation" class="nav"><button class="dropbtn" id="interBtn"><a href="/interpolation">Interpolation</a></button></span>
+                <span id="hairstyle" class="nav"><button class="dropbtn" id="interBtn"><a href="/hairstyle">Hairstyle</a></button></span>
+           </div>
+        </nav>
+    <div id="body">
+
+        <div id="search">
+        <p id="SearchText">
+            AI Image Generation
+        </p>
+        <p id="NextText">Powered by Stable Diffusion</p>
+        <div id="searchFunction">
+        <input id="searchBox" type="text" placeholder="Enter your prompt">
+        <button id="searchButton">Generate</button>
+       </div>
+       <div id="prompts">
+        <div id="exPrompt1" class="exPrompt">An old wooden house in the middle of a forest</div>
+        <div id="exPrompt2" class="exPrompt">A modern street with colourful lights in a metropolitan city</div>
+       </div>
+       <p id="time">Time: 5</p>
+       </div>
+       <div id="imageBox">
+        <div id = "image">
+        <div id="imageContainer" >
+        <img src="{{ url_for('static', filename='image.jpg') }}" alt="">
+        </div>
+        </div>
+
+       </div>
+
+
+
+        </div>
+        
+    
+    </div>
+    
+    
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    </body>
+    
+</html>

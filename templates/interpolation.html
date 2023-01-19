@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>
+            Image Generation
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='inter.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Ubuntu:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    </head>
+    <body background="{{ url_for('static', filename='background.jpg') }}">
+        <nav>
+            <div id="navbar">
+                <span id="home" class="nav"><button class="dropbtn" id="homeBtn"><a href="/">Home</a></button></span>
+                <span id="AIremaster" class="nav"><button class="dropbtn" id="AIremasterBtn"><a href="/demo">AI remaster</a></button></span>
+                <span id="interpolation" class="nav"><button class="dropbtn" id="interBtn"><a href="/interpolation">Interpolation</a></button></span>
+                <span id="hairstyle" class="nav"><button class="dropbtn" id="interBtn"><a href="/hairstyle">Hairstyle</a></button></span>
+           </div>
+        </nav>
+        <div id="body">
+            <div id="box1">
+                <div id="videoBox1">
+                    <video width="960" height="540" controls="controls"/>
+                        <source src="{{ url_for('static', filename='movie1.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div id="box2">
+                <div id="videoBox2">
+                    <video width="960" height="540" controls="controls"/>
+                        <source src="{{ url_for('static', filename='movie2.mp4') }}" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

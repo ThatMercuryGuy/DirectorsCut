@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>
+            Image Generation
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='hairstyle.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Ubuntu:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    </head>
+    <body background="{{ url_for('static', filename='background.jpg') }}">
+        <nav>
+            <div id="navbar">
+                <span id="home" class="nav"><button class="dropbtn" id="homeBtn"><a href="/">Home</a></button></span>
+                <span id="AIremaster" class="nav"><button class="dropbtn" id="AIremasterBtn"><a href="/demo">AI remaster</a></button></span>
+                <span id="interpolation" class="nav"><button class="dropbtn" id="interBtn"><a href="/interpolation">Interpolation</a></button></span>
+                <span id="hairstyle" class="nav"><button class="dropbtn" id="interBtn"><a href="/hairstyle">Hairstyle</a></button></span>
+           </div>
+        </nav>
+        <div id="body">
+            <div id="row">
+                <div id="col1" class="col" background="{{ url_for('static', filename='background.jpg') }}">
+                    <div id="imgCol1" class="imgCol">
+                        <div id="{{ url_for('static', filename='2.png') }}" class="img"><img src="{{ url_for('static', filename='2.png') }}" id="2" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='7.png') }}" class="img"><img src="{{ url_for('static', filename='7.png') }}" id="7" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='10.png') }}" class="img"><img src="{{ url_for('static', filename='10.png') }}" id="10" class="image" alt=""></div>
+                    </div>
+                    <div id="imgCol2" class="imgCol">
+                        <div id="{{ url_for('static', filename='16.png') }}" class="img"><img src="{{ url_for('static', filename='16.png') }}" id="16" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='29.png') }}" class="img"><img src="{{ url_for('static', filename='29.png') }}" id="29" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='34.png') }}" class="img"><img src="{{ url_for('static', filename='34.png') }}" id="34" class="image" alt=""></div>
+                    </div>
+                    <div id="imgCol3" class="imgCol">
+                        <div id="{{ url_for('static', filename='56.png') }}" class="img"><img src="{{ url_for('static', filename='56.png') }}" id="56" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='57.png') }}" class="img"><img src="{{ url_for('static', filename='57.png') }}" id="57" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='63.png') }}" class="img"><img src="{{ url_for('static', filename='63.png') }}" id="63" class="image" alt=""></div>
+                    </div>
+                    <div id="imgCol4" class="imgCol">
+                        <div id="{{ url_for('static', filename='66.png') }}" class="img"><img src="{{ url_for('static', filename='66.png') }}" id="66" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='71.png') }}" class="img"><img src="{{ url_for('static', filename='71.png') }}" id="71" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='75.png') }}" class="img"><img src="{{ url_for('static', filename='75.png') }}" id="75" class="image" alt=""></div>
+                    </div>
+                    <div id="imgCol5" class="imgCol">
+                        <div id="{{ url_for('static', filename='78.png') }}" class="img"><img src="{{ url_for('static', filename='78.png') }}" id="78" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='88.png') }}" class="img"><img src="{{ url_for('static', filename='88.png') }}" id="88" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='91.png') }}" class="img"><img src="{{ url_for('static', filename='91.png') }}" id="91" class="image" alt=""></div>
+                    </div>
+                    <div id="imgCol6" class="imgCol">
+                        <div id="{{ url_for('static', filename='94.png') }}" class="img"><img src="{{ url_for('static', filename='94.png') }}" id="94" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='103.png') }}" class="img"><img src="{{ url_for('static', filename='103.png') }}" id="103" class="image" alt=""></div>
+                        <div id="{{ url_for('static', filename='114.png') }}" class="img"><img src="{{ url_for('static', filename='114.png') }}" id="114" class="image" alt=""></div>
+                    </div>
+                </div>
+                <div id="col2" class="col">
+                    <div id="yourDiv" style="margin-left: 20px; margin-top: 20px;">
+                        <p style="font-size: 20px;">YOUR IMAGE:</p>
+                        <img src="{{ url_for('static', filename='image.png') }}" style="height: 700px; width: 700px" alt="">
+                        <!-- <div class="loader" id="load"></div> -->
+                        <a id="downloadLnk" download="image.jpg" style="display: none;">Take a photo</a>
+                    </div>
+
+                    
+                </div>
+                <div class="modal" style="color: black;">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <div id="modalTitle">
+                            <h1>Hairstyle Selection</h1>
+                        </div>                        
+                        <div id="modalImg">
+                            <img id="modalImgReal" src="{{ url_for('static', filename='image.png') }}" class="image" alt="" style="margin-top: 30px;">
+                        </div>
+                        <div id="modalP" style="margin-top: 50px;">
+                            <input type="checkbox" id="blend" name="blend" style="margin-left: 20px; height: 20px; width: 20px;">
+                            <span style="font-size: 25px; margin-left: 20px">Do you want to blend colour?</span>
+                        </div>
+                        <div id="modalBtnDiv">
+                            <button id="modalGo" style="background-color: red; height: 30px; width: 50px; color: white; font-size: 20px; margin-top: 20px">GO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="videoDivContainer" background="{{ url_for('static', filename='background.jpg') }}" style= " height: 1200px;">
+                <div id="videoDiv" style="display: flex; justify-content: center">
+                    <div id="video" style=" margin-top: 50px; width: 1920px; height: 1080px; background-color: aqua;">
+                        <video autoplay="true" width="1920" height="1080" id="videoElement" style="position: absolute; object-fit:fill">
+                        </video>
+                        <canvas id="canvas" width="1920" height="1080" style="position: absolute; object-fit: cover;"></canvas>
+                    </div>
+                    
+                </div>
+            </div>
+            <div id="snapDiv" background="{{ url_for('static', filename='background.jpg') }}" style=" display: flex; justify-content: center; align-items: center;">
+                <div id="snap" style="background-color: white; padding: 5px; padding-top: 10px ;color: black; width: 200px; display: flex; justify-content: center; align-items: center; height: 20px;">
+                    <p  style="margin-bottom: 20px;  display: flex; justify-content: center; align-items: center;">Take a photo</p>
+                </div>
+            </div>
+            <div id="break" background="{{ url_for('static', filename='background.jpg') }}" style=" height: 100px"></div>
+        </div>
+        <script src="{{ url_for('static', filename='hairstyle.js') }}"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+</html>

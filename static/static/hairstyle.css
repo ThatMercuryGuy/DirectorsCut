@@ -1,0 +1,232 @@
+*
+{
+    padding: 0;
+    margin: 0;
+
+}
+
+body
+{
+    max-height: 1080px; display: block;
+    background-color: #2b97c1;
+}
+#body
+{
+    position: relative;
+    z-index: 1;
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    background-color: rgba(229, 229, 229, 0.119);
+}
+#navbar
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    font-family: 'Ubuntu', sans-serif;
+    background-color: black;
+    padding: 30px;
+    color: white;
+
+}
+
+.nav
+{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.897);
+    font-size: 18px;
+    height: 30px;
+    width: 100px;
+}
+
+a, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    width: 120px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 4;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    max-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #04AA6D}
+
+  #homeBtn:hover {background-color: #04AA6D}
+  #interBtn:hover {background-color: #04AA6D}
+  #AIremasterBTN:hover {background-color: #04AA6D}
+
+.image
+{
+    height: 300px; 
+    width: 300px;
+}
+
+#row
+{
+    display: flex;
+}
+
+#col1
+{
+    overflow-y: scroll;
+    flex: 66.66%;
+    height: 700px;
+}
+
+#col2
+{
+    background-color: black;
+    flex: 33.33%;
+    overflow-y: scroll;
+    height: 700px;
+}
+
+.imgCol
+{
+    display: flex;
+    margin-left: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.img
+{
+    flex: auto;
+}
+
+.image
+{
+    height: 270px;
+    width: 270px;
+    transition: transform .2s;
+}
+
+/* .zoom {
+  padding: 50px;
+  background-color: green;
+  transition: transform .2s; 
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+} */
+
+.image:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  height: 30rem;
+  width: 30rem;
+  border-radius: 0.5rem;
+}
+
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+#modalImg, #modalTitle
+{
+  display: flex;
+  justify-content: center;
+}
+
+#modalBtnDiv
+{
+  display: flex;
+  justify-content: right;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #04AA6D; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#load
+{
+  margin-top: 50px;
+  margin-left: 30px;
+  display: none;
+}

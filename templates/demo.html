@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>
+            Image Generation
+        </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='demo.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Ubuntu:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    </head>
+    <nav>
+        <div id="navbar">
+            <span id="home" class="nav"><button class="dropbtn" id="homeBtn"><a href="/">Home</a></button></span>
+            <span id="AIremaster" class="nav"><button class="dropbtn" id="AIremasterBtn"><a href="/demo">AI remaster</a></button></span>
+            <span id="interpolation" class="nav"><button class="dropbtn" id="interBtn"><a href="/interpolation">Interpolation</a></button></span>
+            <span id="hairstyle" class="nav"><button class="dropbtn" id="interBtn"><a href="/hairstyle">Hairstyle</a></button></span>
+       </div>
+    </nav>
+    <body background="{{ url_for('static', filename='background.jpg') }}">
+        <div id="box3">
+            <div id="imageBox3" class="imgBox">
+                    <div id="ogImage3">
+                        <img src="{{ url_for('static', filename='scan0003_PS.png') }}" class="image" alt="">    
+                    </div>
+                    <div id="finalImage3">
+                        <img src="{{ url_for('static', filename='BestGenScan3.png') }}" class="image" alt="">
+            </div>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="0" class="slider" id="myRange3" oninput="image3()">
+            </div>
+            </div>
+
+        </div>
+        <div id="box1">
+            <div id="imageBox1" class="imgBox">
+                <div id="ogImage1">
+                    <img src="{{ url_for('static', filename='scan0001.jpg') }}" class="image" alt="">    
+                </div>
+                <div id="finalImage1">
+                    <img src="{{ url_for('static', filename='BestGenScan1.png') }}" class="image" alt="">
+                </div>
+                
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="0" class="slider" id="myRange1" oninput="image1()">
+                </div>
+            </div>
+        </div>
+        <div id="box2">
+            <div id="imageBox2" class="imgBox">
+                <div id="ogImage2">
+                    <img src="{{ url_for('static', filename='scan0002.jpg') }}" class="image" alt="">    
+                </div>
+                <div id="finalImage2">
+                    <img src="{{ url_for('static', filename='BestGenScan2.png') }}" class="image" alt="">
+                </div>
+                
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="0" class="slider" id="myRange2" oninput="image2()">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+        
+    
+    </div>
+    
+    
+    <script src="{{ url_for('static', filename='demo.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    </body>
+    
+</html>
